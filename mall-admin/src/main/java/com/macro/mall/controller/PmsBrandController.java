@@ -7,7 +7,6 @@ import com.macro.mall.model.PmsBrand;
 import com.macro.mall.service.PmsBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -21,7 +20,6 @@ import java.util.List;
  */
 @Controller
 @Api(tags = "PmsBrandController")
-@Tag(name = "PmsBrandController", description = "商品品牌管理")
 @RequestMapping("/brand")
 public class PmsBrandController {
     @Autowired

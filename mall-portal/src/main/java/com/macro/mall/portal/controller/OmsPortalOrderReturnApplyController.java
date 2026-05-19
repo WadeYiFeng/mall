@@ -5,7 +5,6 @@ import com.macro.mall.portal.domain.OmsOrderReturnApplyParam;
 import com.macro.mall.portal.service.OmsPortalOrderReturnApplyService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @Api(tags = "OmsPortalOrderReturnApplyController")
-@Tag(name = "OmsPortalOrderReturnApplyController",description = "退货申请管理")
 @RequestMapping("/returnApply")
 public class OmsPortalOrderReturnApplyController {
     @Autowired

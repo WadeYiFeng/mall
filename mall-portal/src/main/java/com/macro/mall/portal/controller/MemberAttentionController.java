@@ -6,7 +6,6 @@ import com.macro.mall.portal.domain.MemberBrandAttention;
 import com.macro.mall.portal.service.MemberAttentionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 @Api(tags = "MemberAttentionController")
-@Tag(name = "MemberAttentionController",description = "会员关注品牌管理")
 @RequestMapping("/member/attention")
 public class MemberAttentionController {
     @Autowired

@@ -7,7 +7,6 @@ import com.macro.mall.model.PmsProductAttributeCategory;
 import com.macro.mall.service.PmsProductAttributeCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,6 @@ import java.util.List;
  */
 @Controller
 @Api(tags = "PmsProductAttributeCategoryController")
-@Tag(name = "PmsProductAttributeCategoryController", description = "商品属性分类管理")
 @RequestMapping("/productAttribute/category")
 public class PmsProductAttributeCategoryController {
     @Autowired

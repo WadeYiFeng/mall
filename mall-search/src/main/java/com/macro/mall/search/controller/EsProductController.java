@@ -8,7 +8,6 @@ import com.macro.mall.search.service.EsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,6 @@ import java.util.List;
  */
 @Controller
 @Api(tags = "EsProductController")
-@Tag(name = "EsProductController",description = "搜索商品管理")
 @RequestMapping("/esProduct")
 public class EsProductController {
     @Autowired

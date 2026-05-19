@@ -33,12 +33,19 @@ redis:
   expire:
     common: 86400 # 24小时
 
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
 secure:
   ignored:
     urls: #安全路径白名单
-      - /swagger-ui/
+      - /doc.html
+      - /webjars/**
       - /swagger-resources/**
-      - /**/v2/api-docs
+      - /v2/api-docs/**
+      - /swagger-ui/**
       - /**/*.html
       - /**/*.js
       - /**/*.css

@@ -6,7 +6,6 @@ import com.macro.mall.portal.domain.MemberProductCollection;
 import com.macro.mall.portal.service.MemberCollectionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 @Api(tags = "MemberCollectionController")
-@Tag(name = "MemberCollectionController",description = "会员收藏管理")
 @RequestMapping("/member/productCollection")
 public class MemberProductCollectionController {
     @Autowired

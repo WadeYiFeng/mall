@@ -9,7 +9,6 @@ import com.macro.mall.portal.service.PmsPortalProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +21,6 @@ import java.util.List;
  */
 @Controller
 @Api(tags = "PmsPortalProductController")
-@Tag(name = "PmsPortalProductController", description = "前台商品管理")
 @RequestMapping("/product")
 public class PmsPortalProductController {
 

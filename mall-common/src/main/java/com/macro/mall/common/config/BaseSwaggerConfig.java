@@ -13,7 +13,6 @@ import springfox.documentation.service.*;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.spring.web.plugins.WebFluxRequestHandlerProvider;
 import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 
 import java.lang.reflect.Field;
@@ -22,7 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Swagger基础配置
+ * Knife4j（OpenAPI2）基础配置
  * Created by macro on 2020/7/16.
  */
 public abstract class BaseSwaggerConfig {
@@ -69,7 +68,7 @@ public abstract class BaseSwaggerConfig {
     private SecurityContext getContextByPath(String pathRegex) {
         return SecurityContext.builder()
                 .securityReferences(defaultAuth())
-                .operationSelector(oc -> oc.requestMappingPattern().matches(pathRegex))
+                .forPaths(PathSelectors.regex(pathRegex))
                 .build();
     }
 
@@ -87,7 +86,7 @@ public abstract class BaseSwaggerConfig {
 
             @Override
             public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-                if (bean instanceof WebMvcRequestHandlerProvider || bean instanceof WebFluxRequestHandlerProvider) {
+                if (bean instanceof WebMvcRequestHandlerProvider) {
                     customizeSpringfoxHandlerMappings(getHandlerMappings(bean));
                 }
                 return bean;

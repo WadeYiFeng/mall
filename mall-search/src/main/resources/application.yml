@@ -10,6 +10,11 @@ spring:
 server:
   port: 8084
 
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
 mybatis:
   mapper-locations:
     - classpath:dao/*.xml

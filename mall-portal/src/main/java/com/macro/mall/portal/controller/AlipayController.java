@@ -6,7 +6,6 @@ import com.macro.mall.portal.domain.AliPayParam;
 import com.macro.mall.portal.service.AlipayService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +26,6 @@ import java.util.Map;
  */
 @Controller
 @Api(tags = "AlipayController")
-@Tag(name = "AlipayController", description = "支付宝支付相关接口")
 @RequestMapping("/alipay")
 public class AlipayController {
 

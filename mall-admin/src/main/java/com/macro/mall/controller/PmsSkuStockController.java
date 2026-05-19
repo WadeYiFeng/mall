@@ -5,7 +5,6 @@ import com.macro.mall.model.PmsSkuStock;
 import com.macro.mall.service.PmsSkuStockService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +17,6 @@ import java.util.List;
  */
 @Controller
 @Api(tags = "PmsSkuStockController")
-@Tag(name = "PmsSkuStockController", description = "sku商品库存管理")
 @RequestMapping("/sku")
 public class PmsSkuStockController {
     @Autowired
